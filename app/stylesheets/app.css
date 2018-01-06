@@ -1,0 +1,108 @@
+.section {
+	margin: 20px;
+}
+body {
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin: 20px;
+    }
+    button {
+      padding: 5px 16px;
+      border-radius: 4px;
+    }
+    button#changeQuota { background-color: yellow; }
+    button#buyTicket,button#buyTickets { background-color: #98fb98; }
+    button#refundTicket { background-color: pink; }
+    button#createWallet { background-color: #add8e6; }
+    button#destroyContract { background-color: pink; }
+    button#changeLocation { background-color: pink; }
+    #seed {color: green;}
+    .left{width:40%;float:left}
+    .right,.middle{width:20%;float:left}
+    .clear{clear:both}
+	sub {
+	    font-weight: normal;
+	}
+
+    .divTable
+    {
+        display:  table;
+        width:auto;
+        background-color:#eee;
+        border:1px solid  #666666;
+        border-spacing:5px;/*cellspacing:poor IE support for  this*/
+       /* border-collapse:separate;*/
+    }
+
+    .divRow
+    {
+       display:table-row;
+       width:auto;
+    }
+
+    .divCell
+    {
+        float:left;/*fix for  buggy browsers*/
+        display:table-column;
+        width:200px;
+        background-color:#ccc;
+    }
+
+.acidjs-rating-stars,
+.acidjs-rating-stars label::before
+{
+    display: inline-block;
+}
+ 
+.acidjs-rating-stars label:hover,
+.acidjs-rating-stars label:hover ~ label
+{
+    color: #189800;
+}
+ 
+.acidjs-rating-stars *
+{
+    margin: 0;
+    padding: 0;
+}
+ 
+.acidjs-rating-stars input
+{
+    display: none;
+}
+ 
+.acidjs-rating-stars
+{
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+ 
+.acidjs-rating-stars label
+{
+    color: #ccc;
+}
+ 
+.acidjs-rating-stars label::before
+{
+    content: "\2605";
+    width: 25px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+}
+ 
+.acidjs-rating-stars input:checked ~ label
+{
+    color: #f5b301;
+}
+ 
+.acidjs-rating-disabled
+{
+    opacity: .50;
+     
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    pointer-events: none;
+}

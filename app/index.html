@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+p {
+  float: right ;
+}
+</style>
+<head>
+  <title>Parking DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./app.js"></script>
+   <script type="text/javascript">
+function addMoreRows1(){
+         var table = document.getElementById("ad");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+
+// Add some text to the new cells:
+cell1.innerHTML = document.getElementById('carnumber').value;
+cell2.innerHTML = document.getElementById('ownerAddress').value;
+   }
+function addMoreRows2(){
+         var table = document.getElementById("ad2");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+
+// Add some text to the new cells:
+cell1.innerHTML = document.getElementById('ctimeAddress').value;
+cell2.innerHTML = document.getElementById('carnumber').value;
+cell3.innerHTML = document.getElementById('ownerAddress').value;
+   }
+function addMoreRows3(){
+         var table = document.getElementById("ad3");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+//var cell6 = row.insertCell(5);
+
+// Add some text to the new cells:
+cell1.innerHTML = document.getElementById('ctimeAddress').value;
+cell2.innerHTML = document.getElementById('cotimeAddress').value;
+cell3.innerHTML = document.getElementById('carnumber').value;
+cell4.innerHTML = document.getElementById('ownerAddress').value;
+cell5.innerHTML = document.getElementById('code').value;
+//cell6.innerHTML = document.getElementById('amount').value.toNumber();
+   }
+        function show() { document.getElementById('friendAddress').style.display = 'block'; }
+        function hide() { document.getElementById('friendAddress').style.display = 'none'; }
+        
+      </script>
+</head>
+<body>
+  <h1>Parking DApp</h1>
+  <div class="section">
+    	<div class="left">Contract deployed at: <div id="confAddress"></div></div>
+	<div class="middle">parking Balance: <div id="parkBalance">0</div></div>	
+  </div>
+
+
+ </br>
+<hr/>
+    <h2>Owner vs Vehicle</h2>
+    <table id="ad">
+  <tr>
+    <th>Vehicle Number</th>
+    <th>Vehicle Owner</th>
+  </tr>
+  
+  
+</table> 
+  <hr/>
+
+
+
+  <div class="section">
+    <h2>Add Vehicle</h2>
+      Vehicle Number: <input type="text" id="carnumber"/></br>
+      Vehicle Owner: <input type="text" id="ownerAddress" /></br>
+      <button id="add" onClick="addMoreRows1(); return false;">Add</button>
+      <span id="addResult"></span>
+  </div>
+
+  <hr/>
+
+    <h2>Current Parking</h2>
+    <table id="ad2">
+  <tr>
+    <th>Time</th>
+    <th>Vehicle Number</th>
+    <th>Vehicle Owner</th>
+  </tr>
+
+  
+</table> 
+  <hr/>
+
+
+  <div class="section">
+    <h2>Check-In</h2>
+      Vehicle Number: <input type="text" id="carnumber" /></br>
+      Vehicle Owner: <input type="text" id="ownerAddress" /></br>
+      CheckIn Time: <input type="text" id="ctimeAddress" /></br>
+      <button id="checkIn" onClick="addMoreRows2(); return false;">checkIn</button>
+      <span id="checkinResult"></span>
+  </div>
+
+  <hr/>
+
+  <div class="section">
+    <h2>Check-Out</h2>
+    <p>parking amount</br>if time '<' 60 amount = 10</br>if time '>' 60 and '<'180 amount = 20</br>if time '>'180  amount = 30</br>shopping offer codes - 111,333,444 //will get 50% off </br>movie offer codes - 222,555,666 //will get 10% off</p>
+     Vehicle Number: <input type="text" id="carnumber" /></br>
+      Offer Code: <input type="text" id="code" /></br>
+      CheckOut Time: <input type="text" id="cotimeAddress" /></br>
+      
+      <button id="checkOut">checkOut</button>
+      <span id="checkoutResult"></span>
+       
+
+  </div>
+<div class="section">
+    Amount To Pay: <span id="amount">0</span>
+  
+</div>
+            
+     
+		    <form>
+			<input type="radio" name="group-1" id="group-1-0" value="a"checked onclick="hide();"/><label for="group-1-0">self</label>
+			<input type="radio" name="group-1" id="group-1-1" value="b" onclick="show();"/><label for="group-1-1">others</label>
+                        <input type="text" style="display:none" id="friendAddress" />
+		    </form>
+		
+    <button id="pay" onClick="addMoreRows3(); return false;">Pay</button>
+      <span id="payResult"></span>
+  </div>
+
+
+  <hr/>
+
+ <h2>Parking History</h2>
+    <table id="ad3">
+<tr>
+   <th>InTime</th>
+  <th>OutTime</th>
+    <th>Vehicle Number</th>
+    <th>Vehicle Owner</th>
+    <th>offer code</th>
+    
+   </tr> 
+</table> 
+  <hr/>
+
+</body>
+</html> 

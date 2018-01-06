@@ -27,3 +27,8 @@ ERROR in ./app/main.js
 Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
  @ ./app/main.js 11:16-59
 ```
+## truffle.js Error
+*object not found
+Then search the truffle.cmd file and rename it to 'truf' or anything similar to that.After that you have to use commands like
+*truf migrate
+*truf compile

@@ -28,7 +28,7 @@ Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/U
  @ ./app/main.js 11:16-59
 ```
 ## truffle.js Error
-*object not found
-Then search the truffle.cmd file and rename it to 'truf' or anything similar to that.After that you have to use commands like
-*truf migrate
-*truf compile
+* object not found
+Then search the truffle.cmd file and rename it to 'truf' or anything similar to that. After that you have to use commands like
+* truf migrate
+* truf compile
